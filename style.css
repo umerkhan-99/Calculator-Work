@@ -1,0 +1,92 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f9;
+    font-family: 'Arial', sans-serif;
+}
+
+.calculator {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 10px 30px rgba(0,0,0,0.3);
+}
+
+#display {
+    width: 100%;
+    height: 50px;
+    font-size: 24px;
+    text-align: right;
+    margin-bottom: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+    border: none;
+    background: #eee;
+    border-radius: 5px;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+button {
+    padding: 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #555;
+    color: white;
+    transition: 0.2s;
+}
+
+button:hover {
+    background-color: #777;
+}
+
+.operator {
+    background-color: #ff9500;
+}
+
+.equals {
+    background-color: #28a745;
+    grid-row: span 2;
+}
+
+.zero {
+    grid-column: span 2;
+}
+
+/* Tablet aur Mobile screens ke liye (Max width 480px) */
+@media (max-width: 480px) {
+    .calculator {
+        width: 90%; /* Screen ki width ka 90% cover karega */
+        padding: 15px;
+    }
+
+    button {
+        padding: 15px; /* Buttons thode chhote ho jayenge */
+        font-size: 16px;
+    }
+
+    #display {
+        font-size: 20px;
+        height: 45px;
+    }
+}
+
+/* Bohat chhoti screens ke liye (e.g., purane phones) */
+@media (max-width: 320px) {
+    .buttons {
+        gap: 5px; /* Buttons ke darmiyan space kam ho jayegi */
+    }
+
+    button {
+        padding: 10px;
+        font-size: 14px;
+    }
+}
